@@ -1,0 +1,183 @@
+/* إعدادات عامة وتنسيق الخطوط */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* خلفية متدرجة حديثة تملأ الشاشة */
+body {
+    background: linear-gradient(135deg, #0f172a, #1e1b4b);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f8fafc;
+}
+
+/* عنوان الصفحة بتدرج لوني جذاب */
+h1 {
+    margin-bottom: 25px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
+}
+
+/* الحاوية الرئيسية بتصميم زجاجي (Glassmorphism) */
+.stopwatch {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 45px 60px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+/* شاشة عرض الوقت بتأثير إضاءة نيون خفيف */
+.time {
+    font-size: 3.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #e2e8f0;
+    text-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+    font-variant-numeric: tabular-nums;
+    /* لضمان ثبات عرض الأرقام وتجنب اهتزازها أثناء العد */
+}
+
+/* حاوية الأزرار */
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* التنسيق الأساسي للأزرار */
+.buttons button {
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* زر البدء (Start) بلون أخضر زمردي متدرج */
+#startBtn {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+}
+
+#startBtn:hover {
+    background: linear-gradient(135deg, #34d399, #10b981);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+/* زر الإيقاف (Stop) بلون أحمر متدرج */
+#StopBtn {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+}
+
+#StopBtn:hover {
+    background: linear-gradient(135deg, #f87171, #ef4444);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+}
+
+/* زر إعادة التعيين (Reset) بلون رمادي أنيق */
+#resetBtn {
+    background: linear-gradient(135deg, #64748b, #475569);
+    color: white;
+}
+
+#resetBtn:hover {
+    background: linear-gradient(135deg, #94a3b8, #64748b);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(100, 116, 139, 0.4);
+}
+
+#lapBtn {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: white;
+}
+
+#lapBtn:hover {
+    background: linear-gradient(135deg, #818cf8, #6366f1);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+}
+
+#laps {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+    max-height: 180px;
+    overflow-y: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 عناصر بجانب بعض في كل سطر */
+    gap: 8px;
+    /* مسافة بين العناصر */
+}
+
+.lap-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 8px 6px;
+    /* مساحة داخلية متناسبة مع الحجم الجديد */
+    border-radius: 6px;
+    font-size: 13px;
+    /* تكبير حجم الخط */
+    font-weight: bold;
+    /* جعل الخط عريض وبارز */
+    letter-spacing: 0.5px;
+    color: #cbd5e1;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
+}
+
+/* ألوان الـ 4 ريكوردز الأولى */
+.lap-gold {
+    border-color: #ffd700;
+    color: #ffd700;
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+.lap-silver {
+    border-color: #c0c0c0;
+    color: #c0c0c0;
+    background-color: rgba(192, 192, 192, 0.1);
+}
+
+.lap-bronze {
+    border-color: #cd7f32;
+    color: #cd7f32;
+    background-color: rgba(205, 127, 50, 0.1);
+}
+
+.lap-burgundy {
+    border-color: #800020;
+    color: #ff6b8b;
+    /* درجة نبيتي/فوشيا فاتحة وواضحة على الخلفية الغامقة */
+    background-color: rgba(128, 0, 32, 0.2);
+}
+
+/* تأثير الضغط على الأزرار */
+.buttons button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
