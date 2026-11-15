@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calculator - iOS Style</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Container for dynamic flying particles -->
+    <div id="particle-container"></div>
+
+    <div class="calculator-card" id="calculator">
+        <div class="display-container">
+            <div class="previous-expression" id="prev-display"></div>
+            <div class="current-input" id="display">0</div>
+        </div>
+
+        <div class="keypad">
+            <!-- Row 1 -->
+            <button class="btn btn-utility" data-action="clear" id="clear-btn">AC</button>
+            <button class="btn btn-utility" data-action="toggle-sign">±</button>
+            <button class="btn btn-utility" data-action="percent">%</button>
+            <button class="btn btn-operator" data-action="operator" data-val="/">÷</button>
+
+            <!-- Row 2 -->
+            <button class="btn btn-number" data-val="7">7</button>
+            <button class="btn btn-number" data-val="8">8</button>
+            <button class="btn btn-number" data-val="9">9</button>
+            <button class="btn btn-operator" data-action="operator" data-val="*">×</button>
+
+            <!-- Row 3 -->
+            <button class="btn btn-number" data-val="4">4</button>
+            <button class="btn btn-number" data-val="5">5</button>
+            <button class="btn btn-number" data-val="6">6</button>
+            <button class="btn btn-operator" data-action="operator" data-val="-">−</button>
+
+            <!-- Row 4 -->
+            <button class="btn btn-number" data-val="1">1</button>
+            <button class="btn btn-number" data-val="2">2</button>
+            <button class="btn btn-number" data-val="3">3</button>
+            <button class="btn btn-operator" data-action="operator" data-val="+">+</button>
+
+            <!-- Row 5 -->
+            <button class="btn btn-number btn-zero" data-val="0">0</button>
+            <button class="btn btn-number" data-val=".">.</button>
+            <button class="btn btn-operator" data-action="calculate">=</button>
+        </div>
+
+        <div class="keyboard-hint">You can use your keyboard too ⌨️</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
