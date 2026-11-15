@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icons Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="main-container" class="container">
+        <!-- Header Section -->
+        <header id="main-header">
+            <img src="bOOK.png" alt="Antique open book" class="book-ornament">
+
+            <h1 id="header-title">
+                <i class="fa-solid fa-book-open"></i>
+                Library Management System
+            </h1>
+
+            <img src="NA2SHA.png" alt="" class="divider-ornament">
+        </header>
+        <!-- Controls Section: Add & Search -->
+        <div id="controls-section" class="controls-section">
+            <!-- Add Book Form -->
+            <form id="add-book-form" class="card">
+                <h3 id="form-heading">Add New Book</h3>
+                <div id="form-input-group" class="input-group">
+                    <input type="text" id="book-name-input" placeholder="Book title..." required>
+                    <input type="text" id="book-author-input" placeholder="Author name..." required>
+                    <button type="submit" id="add-btn"><i class="fa-solid fa-plus"></i> Add </button>
+                </div>
+            </form>
+
+            <!-- Search Box -->
+            <div id="search-card" class="search-box card">
+                <h3 id="search-heading">Search Book</h3>
+                <div id="search-input-group" class="input-group">
+                    <input type="text" id="search-input" placeholder="Type book name to search...">
+                    <button id="clear-search-button" class="clear-search-btn"><i class="fa-solid fa-times"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Books List Section -->
+        <div id="books-section" class="books-section card">
+            <h3 id="books-list-heading">Available Books</h3>
+            <ul id="books-list">
+                <!-- Sample Book Item 1 -->
+                <li id="book-item-1" class="book-item" data-id="1">
+                    <div id="book-info-1" class="book-info">
+                        <span id="book-title-1" class="book-title">Network Security Basics</span>
+                        <span id="book-author-1" class="book-author">Author: Dr. Ahmed</span>
+                    </div>
+                    <div id="book-actions-1" class="book-actions">
+                        <button id="edit-btn-1" class="edit-btn" title="Edit"><i class="fa-solid fa-pen-to-square"></i>
+                            Edit</button>
+                        <button id="delete-btn-1" class="delete-btn" title="Delete"><i class="fa-solid fa-trash"></i>
+                            Delete</button>
+                    </div>
+                </li>
+
+                <!-- Sample Book Item 2 -->
+                <li id="book-item-2" class="book-item" data-id="2">
+                    <div id="book-info-2" class="book-info">
+                        <span id="book-title-2" class="book-title">Learn C++ Programming</span>
+                        <span id="book-author-2" class="book-author">Author: Moamen Hisham</span>
+                    </div>
+                    <div id="book-actions-2" class="book-actions">
+                        <button id="edit-btn-2" class="edit-btn" title="Edit"><i class="fa-solid fa-pen-to-square"></i>
+                            Edit</button>
+                        <button id="delete-btn-2" class="delete-btn" title="Delete"><i class="fa-solid fa-trash"></i>
+                            Delete</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

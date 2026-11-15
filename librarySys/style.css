@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;700;1,400&family=Amiri:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Playfair Display', 'Amiri', serif;
+    background: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed;
+    background-size: cover;
+    color: #e6c687;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 8, 6, 0.84);
+    backdrop-filter: blur(6px);
+    z-index: -1;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+#main-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.book-ornament {
+    width: 45px;
+    height: auto;
+    margin-bottom: 4px;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.6));
+}
+
+#header-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.7rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #f3d9a4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-shadow: 0 2px 10px rgba(212, 175, 55, 0.25);
+    margin-bottom: 0;
+}
+
+#header-title i {
+    font-size: 2.1rem;
+    color: #d4af37;
+}
+
+.divider-ornament {
+    width: 420px;
+    max-width: 100%;
+    height: auto;
+    margin: -6px auto 15px;
+    opacity: 0.9;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
+    display: block;
+}
+
+#header-subtitle {
+    font-style: italic;
+    font-size: 1.05rem;
+    color: #d4b572;
+    opacity: 0.9;
+}
+
+/* Main Container Card */
+#main-container {
+    background: rgba(18, 14, 11, 0.88);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 14px;
+    padding: 40px 45px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(212, 175, 55, 0.05);
+}
+
+/* Cards & Sections */
+.card {
+    background: rgba(28, 22, 18, 0.7);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 10px;
+    padding: 22px 28px;
+    margin-bottom: 22px;
+}
+
+.card h3,
+.books-section h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    color: #e6c687;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.input-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    position: relative;
+}
+
+input[type="text"] {
+    flex: 1;
+    background: rgba(15, 11, 9, 0.9);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 6px;
+    padding: 12px 18px;
+    color: #f3d9a4;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+    color: rgba(230, 198, 135, 0.45);
+    font-style: italic;
+}
+
+input[type="text"]:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 22px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#add-btn {
+    background: #0d7a46;
+    color: #ffffff;
+    padding: 12px 26px;
+    box-shadow: 0 4px 12px rgba(13, 122, 70, 0.3);
+}
+
+#add-btn:hover {
+    background: #0f9254;
+    transform: translateY(-1px);
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    right: 20px;
+    color: rgba(230, 198, 135, 0.5);
+    pointer-events: none;
+}
+
+.clear-search-btn {
+    position: absolute;
+    left: 15px;
+    background: transparent;
+    color: rgba(230, 198, 135, 0.6);
+    padding: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.clear-search-btn:hover {
+    color: #e6c687;
+}
+
+/* Books List */
+.books-section {
+    background: rgba(28, 22, 18, 0.7);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 10px;
+    padding: 22px 28px;
+}
+
+#books-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.book-item {
+    background: rgba(18, 14, 11, 0.85);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 8px;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.book-item:hover {
+    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.book-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #f3d9a4;
+}
+
+.book-author {
+    font-size: 0.88rem;
+    color: #c5a059;
+    font-style: italic;
+}
+
+.book-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn {
+    background: #d97706;
+    color: #ffffff;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+}
+
+.edit-btn:hover {
+    background: #f59e0b;
+}
+
+.delete-btn {
+    background: #b91c1c;
+    color: #ffffff;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+@media (max-width: 768px) {
+    #main-container {
+        padding: 20px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .book-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .book-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
